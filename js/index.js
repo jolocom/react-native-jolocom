@@ -5,6 +5,7 @@ const tslib_1 = require("tslib");
 const react_native_1 = require("react-native");
 const { RNJolocom } = react_native_1.NativeModules;
 exports.default = RNJolocom;
+tslib_1.__exportStar(require("./transports"), exports);
 tslib_1.__exportStar(require("./storage"), exports);
 tslib_1.__exportStar(require("./passwordStore"), exports);
 tslib_1.__exportStar(require("@jolocom/sdk"), exports);

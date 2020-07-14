@@ -21,8 +21,13 @@ class WebSocketsChannelTransport {
         const ws = this.ws = new WebSocket(transport.config);
         this.ready = new Promise((resolve, reject) => {
             let ready = false;
+            ws.addEventListener('error', (ev) => {
+                console.error('websockets error', ev);
+            });
             // TODO check for open errors and reject the promise
-            ws.addEventListener('open', () => {
+            ws.addEventListener('open', (ev) => {
+                console.log('websockets opem', ev);
+                resolve();
             });
             ws.addEventListener('close', () => {
                 // TODO check for close errors and reject the promise
@@ -32,7 +37,6 @@ class WebSocketsChannelTransport {
                 if (!ready) {
                     ready = true;
                     console.log('WebSocket got first message! Ready! FIXME!');
-                    resolve();
                 }
                 else {
                     this.onMessage(message.data);
