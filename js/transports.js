@@ -55,7 +55,7 @@ class WebSocketsChannelTransport {
     onMessage(msg) {
         const data = msg.trim();
         if (!data.length) {
-            console.error('Empty Message!');
+            // FIXME should we just be silently ignoring these?
             return;
         }
         this.receive();
