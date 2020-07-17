@@ -23,6 +23,9 @@ class WebSocketsChannelTransport {
             let ready = false;
             ws.addEventListener('error', (ev) => {
                 console.error('websockets error', ev);
+                if (!ready) {
+                    reject(ev);
+                }
             });
             // TODO check for open errors and reject the promise
             ws.addEventListener('open', (ev) => {
@@ -55,6 +58,7 @@ class WebSocketsChannelTransport {
             console.error('Empty Message!');
             return;
         }
+        this.receive();
         this._resolveReceive && this._resolveReceive(data);
     }
     receive() {

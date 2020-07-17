@@ -27,6 +27,9 @@ class WebSocketsChannelTransport implements ChannelTransportAPI {
 
       ws.addEventListener('error', (ev) => {
         console.error('websockets error', ev)
+        if (!ready) {
+          reject(ev)
+        }
       })
 
       // TODO check for open errors and reject the promise
