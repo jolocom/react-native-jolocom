@@ -1,18 +1,9 @@
-import { ChannelTransportAPI, ChannelTransport } from '@jolocom/sdk/js/src/lib/channels';
 import { JolocomSDK, JolocomPlugin } from '@jolocom/sdk';
-export declare class JolocomWebSockets implements JolocomPlugin {
+import { InteractionTransport, InteractionTransportAPI } from '@jolocom/sdk/js/src/lib/interactionManager/interactionManager';
+export declare class JolocomLinking implements JolocomPlugin {
     register(sdk: JolocomSDK): Promise<void>;
-    startChannelTransport(transport: ChannelTransport): WebSocketsChannelTransport;
+    startTransport(config: InteractionTransport): InteractionTransportAPI;
 }
-declare class WebSocketsChannelTransport implements ChannelTransportAPI {
-    private ws;
-    private _receivePromise;
-    private _resolveReceive?;
-    ready: Promise<void>;
-    constructor(transport: ChannelTransport);
-    send(msg: string): void;
-    onMessage(msg: string): void;
-    receive(): Promise<string>;
-    stop(): void;
+export declare enum ErrorCode {
+    DeepLinkCannotBeOpened = "DeepLinkCannotBeOpened"
 }
-export {};
