@@ -5,10 +5,13 @@
 module.exports = {
   resolver: {
     extraNodeModules: {
+      // React Native bindings for jolocom/wallet-rs
       crypto: require.resolve('react-native-crypto'),
+      // Polyfills for node packages
       'crypto-browserify': require.resolve('react-native-crypto'),
       stream: require.resolve('stream-browserify'),
       vm: require.resolve('vm-browserify'),
+      '@jolocom/native-core-node': require.resolve('@jolocom/native-core-react-native')
     },
   },
 }
