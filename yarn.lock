@@ -1019,9 +1019,9 @@
   integrity sha512-suaIxsx+TkSVxTTaGShHZYyvptfECP7RSwU9WsaHTGXE1Gj3+jM2n1wOAguq2JVUvxYhkU6qsS6RwsC4Z8+tEQ==
 
 "@jolocom/native-core-node-linux-x64@^1.0.0-rc4":
-  version "1.0.0-rc3"
-  resolved "https://registry.yarnpkg.com/@jolocom/native-core-node-linux-x64/-/native-core-node-linux-x64-1.0.0-rc3.tgz#b41a3f9662d1525563eea64d874c15050188fcda"
-  integrity sha512-RJLgRlmRliRLDzNItnCLIHbbp/K7LsysJpFSX6HqTR15KA7Rfk6mKKkHvlWD26bmItrzvatL8KXVigRpctaVqA==
+  version "1.0.0-rc8"
+  resolved "https://registry.yarnpkg.com/@jolocom/native-core-node-linux-x64/-/native-core-node-linux-x64-1.0.0-rc8.tgz#b55632f2afa34930fdf73c3205f78561837497b6"
+  integrity sha512-Y72VVorKQoFszBMWyYTvyxLX9Sf2oGaKZihbvReUqPi8pBNHgUYnaO23w1AMzg+pmlyXlFtrvAOksCn8FT2Qzg==
 
 "@jolocom/native-core-node@^0.7.18":
   version "0.7.18"
@@ -1031,10 +1031,10 @@
     "@jolocom/native-core-node-darwin-x64" "^1.0.0-rc4"
     "@jolocom/native-core-node-linux-x64" "^1.0.0-rc4"
 
-"@jolocom/native-core-react-native@^1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@jolocom/native-core-react-native/-/native-core-react-native-1.0.10.tgz#ec1d4307b7c67729094958966adb00cb3130903f"
-  integrity sha512-hiFJhvGMfMiMBMeu3ck/zztF/tA3KcYUphLQWNwKZU6E+7GaUFOJtDro75bMwSS+KY+kUdNMlwNWHC1ce2rR+A==
+"@jolocom/native-core-react-native@^1.0.13":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@jolocom/native-core-react-native/-/native-core-react-native-1.0.13.tgz#9b236b0f2a29a1efea388e27ac8ca5335cf9ed98"
+  integrity sha512-RufmijrZ4f7yQUU7KaQbWDDZ+7x2XsLOzaSK8PZVnCVQnZf7oeeDQT+MKlv5yd0UxJzQTuRCpyoF4GMijXGLWg==
 
 "@jolocom/protocol-ts@^0.5.1":
   version "0.5.1"
