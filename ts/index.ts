@@ -41,11 +41,14 @@ if (!Object.setPrototypeOf) {
   }
 }
 
-// Needed so we can post DID documents to IPFS nodes. Regular fetch has issues
-// related to multi-part data / boundries
-import RNFetchBlob from 'rn-fetch-blob'
-// @ts-ignore
-global.fetch = new RNFetchBlob.polyfill.Fetch({ auto: true }).build()
+// NOTE: the below code was needed so we can POST DID documents to IPFS nodes.
+// Regular fetch has issues related to multi-part data / boundries
+// BUT we don't use it anymore as jolo identities are not being created on RN
+// anymore
+
+//import RNFetchBlob from 'rn-fetch-blob'
+//// @ts-ignore
+//global.fetch = new RNFetchBlob.polyfill.Fetch({ auto: true }).build()
 
 // @ts-ignore
-global.Blob = RNFetchBlob.polyfill.Blob
+//global.Blob = RNFetchBlob.polyfill.Blob
