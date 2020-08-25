@@ -1,6 +1,6 @@
 {
   "name": "react-native-jolocom",
-  "version": "1.4.9",
+  "version": "1.4.10",
   "description": "",
   "main": "js/index.js",
   "files": [
@@ -31,7 +31,7 @@
     "react-native": "^0.59.0"
   },
   "dependencies": {
-    "@jolocom/native-core-react-native": "^1.0.16",
+    "@jolocom/native-core-react-native": "^1.0.17",
     "@jolocom/sdk-storage-typeorm": "^2.0.9",
     "crypto-browserify": "^3.12.0",
     "object.assign": "^4.1.0",
