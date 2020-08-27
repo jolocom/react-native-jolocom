@@ -1031,10 +1031,10 @@
     "@jolocom/native-core-node-darwin-x64" "^1.0.0-rc4"
     "@jolocom/native-core-node-linux-x64" "^1.0.0-rc4"
 
-"@jolocom/native-core-react-native@^1.1.0-rc0":
-  version "1.1.0-rc0"
-  resolved "https://registry.yarnpkg.com/@jolocom/native-core-react-native/-/native-core-react-native-1.1.0-rc0.tgz#4f600edd56d6b32aa9f6ba427f81c09ca9468e8c"
-  integrity sha512-lImmuyUFqfoi4A1r5FVLKNLi/YM7lzGXEcjPlHAcaA49xk2qd9Dlew3UMVhgYEJ19xHNaeUUfX5UCNGV0gYIbQ==
+"@jolocom/native-core-react-native@^1.1.0-rc1":
+  version "1.1.0-rc1"
+  resolved "https://registry.yarnpkg.com/@jolocom/native-core-react-native/-/native-core-react-native-1.1.0-rc1.tgz#3a79449cbd677952a8a7887f5614f4b52e9b5148"
+  integrity sha512-ZvfkusZsVQxI7TsUsh2ll/a6HhQSixlbnbe+Q5OJZfjqZbGlJn/JwltefMNT3UjnELrXx8oNh9K1liWbiJ4+9w==
 
 "@jolocom/protocol-ts@^0.5.1":
   version "0.5.1"
