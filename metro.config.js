@@ -11,7 +11,6 @@ module.exports = {
       'crypto-browserify': require.resolve('react-native-crypto'),
       stream: require.resolve('stream-browserify'),
       vm: require.resolve('vm-browserify'),
-      '@jolocom/native-core-node': require.resolve('@jolocom/native-core-react-native')
     },
   },
 }

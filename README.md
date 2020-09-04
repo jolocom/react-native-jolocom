@@ -7,40 +7,32 @@ Native.
 
 ### Install
 
-`$ npm install react-native-jolocom --save`
+You need to install two packages, the `@jolocom/native-core-react-native`
+package contains the actual binding code and is generated from
+https://github.com/jolocom/rust-multi-target/tree/master/react-native
+
+```sh
+$ yarn add react-native-jolocom @jolocom/native-core-react-native
+```
 
 OR
 
-`$ yarn add react-native-jolocom`
+```sh
+$ npm install --save react-native-jolocom @jolocom/native-core-react-native
+```
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-jolocom`
+For React Native version >= 0.60, Android is automatic, but for iOS you need to do:
+```sh
+$ cd ios
+$ pod install
+```
 
-### Manual installation
-
-
-#### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-jolocom` and add `RNJolocom.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNJolocom.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNJolocomPackage;` to the imports at the top of the file
-  - Add `new RNJolocomPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-    ```
-    include ':react-native-jolocom'
-    project(':react-native-jolocom').projectDir = new File(rootProject.projectDir,  '../node_modules/react-native-jolocom/android')
-    ```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-    ```
-      compile project(':react-native-jolocom')
-    ```
+For React Native version < 0.60 you need to link
+```
+$ react-native link react-native-jolocom @jolocom/native-core-react-native
+```
 
 ### Configure Metro
 
@@ -62,13 +54,18 @@ module.exports = {
       'crypto-browserify': require.resolve('react-native-crypto'),
       stream: require.resolve('stream-browserify'),
       vm: require.resolve('vm-browserify'),
-      '@jolocom/native-core-node': require.resolve('@jolocom/native-core-react-native')
     },
   },
 }
 ```
 
+And of course you need to add those as dependency in your project:
+```sh
+$ yarn add react-native-crypto stream-browserify vm-browserify
+```
+
 ### Configure SDK storage
+
 The SDK requires a storage backend, and there is currently only
 [JolocomTypeormStorage](https://github.com/jolocom/sdk-storage-typeorm)
 implemented. An example typeorm configuration `ormconfig.ts` is provided below
