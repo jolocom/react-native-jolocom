@@ -1,6 +1,6 @@
 {
   "name": "react-native-jolocom",
-  "version": "2.0.0-rc2",
+  "version": "2.0.0-rc3",
   "description": "React Native environment for Jolocom SDK",
   "main": "js/index.js",
   "files": [
@@ -26,9 +26,9 @@
   "author": "Jolocom Dev <dev@jolocom.io>",
   "license": "Apache-2.0",
   "peerDependencies": {
-    "@jolocom/native-core-react-native": "^1.1.0-rc6",
-    "@jolocom/sdk": "^0.18.4",
-    "jolocom-lib": "^5.0.20",
+    "@jolocom/native-core-react-native": "^1.2.0",
+    "@jolocom/sdk": "^1.0.0",
+    "jolocom-lib": "^5.1.0",
     "react-native": "^0.59.0"
   },
   "dependencies": {
