@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.JolocomKeychainPasswordStore = void 0;
 const tslib_1 = require("tslib");
 const Keychain = tslib_1.__importStar(require("react-native-keychain"));
-const randomBytes = require('react-native-randomBytes');
+const randomBytes = require('react-native-randombytes').randomBytes;
 /**
  * This PasswordStore will use the Android/iOS native secure storage to store a
  * randomly generated 32byte password
@@ -29,13 +29,7 @@ class JolocomKeychainPasswordStore {
             });
             if (result === false) {
                 // there is no password stored
-                const password = yield new Promise((res, rej) => {
-                    randomBytes(32, (err, bytes) => {
-                        if (err)
-                            return rej(err);
-                        res(bytes);
-                    });
-                });
+                const password = randomBytes(32).toString('base64');
                 yield this.setPassword(password);
                 return password;
             }

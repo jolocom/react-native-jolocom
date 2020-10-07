@@ -1,7 +1,8 @@
 import * as Keychain from 'react-native-keychain'
 import { IPasswordStore } from '@jolocom/sdk/js/storage'
 
-const randomBytes = require('react-native-randomBytes')
+const randomBytes = require('react-native-randombytes').randomBytes
+
 /**
  * This PasswordStore will use the Android/iOS native secure storage to store a
  * randomly generated 32byte password
@@ -25,12 +26,7 @@ export class JolocomKeychainPasswordStore implements IPasswordStore {
 
     if (result === false) {
       // there is no password stored
-      const password = await new Promise<string>((res, rej) => {
-        randomBytes(32, (err: Error, bytes: string) => {
-          if (err) return rej(err)
-          res(bytes)
-        })
-      })
+      const password = randomBytes(32).toString('base64')
       await this.setPassword(password)
       return password
     } else {
