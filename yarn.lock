@@ -1120,10 +1120,10 @@
   dependencies:
     ethers "5.0.5"
 
-"@jolocom/sdk-storage-typeorm@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@jolocom/sdk-storage-typeorm/-/sdk-storage-typeorm-4.0.0.tgz#02185ab15d32e436d47e36bf73beea3e656d0e8f"
-  integrity sha512-nLY0Km+RvCPy0W7OAhQacV0zJn+oGlV5nRwSxXPM9M+m+cIVPKhcOjaw3D/k1YAC9CoT4MNK5ZT+nEyoEnnGPA==
+"@jolocom/sdk-storage-typeorm@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@jolocom/sdk-storage-typeorm/-/sdk-storage-typeorm-4.2.0.tgz#bcb559e2cbbf4246d302efb05778cb6e6d5bd7c1"
+  integrity sha512-LBmxfHBp8+ddOw/+Mbu3OU9mXoWuQhZQynl/eDkQ1VE0C0CJXTPrQ2g9LqzCHiwiAvOXajfnhb0l48+9awjydg==
   dependencies:
     class-transformer "^0.3.1"
     ramda "^0.27.1"
