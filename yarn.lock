@@ -1106,10 +1106,10 @@
   dependencies:
     cred-types-jolocom-core "^0.0.11"
 
-"@jolocom/protocol-ts@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@jolocom/protocol-ts/-/protocol-ts-0.5.2.tgz#291a6865f2c3eeb47443bf8be3210848baeb5d25"
-  integrity sha512-vQq5EhapRaxyzM3UaEAycoej1jdaU6RWM1yNeh47SqHqEfRsxsVrI3MYAuUeCXaq5ULv4MCwrDt/Y6ARsR4EOA==
+"@jolocom/protocol-ts@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@jolocom/protocol-ts/-/protocol-ts-0.5.4.tgz#a59052d97b45ad157e877b1ed8ed2cd8235ad45e"
+  integrity sha512-t6gzeLZPgKQUksjAVgMint/htYIEy6LwVfqhm7kZx4+bkAxa0LHIynqEXFPA7bbx1+mrd2hxsvWmSswXiBtlkw==
   dependencies:
     cred-types-jolocom-core "^0.0.11"
 
@@ -1120,20 +1120,20 @@
   dependencies:
     ethers "5.0.5"
 
-"@jolocom/sdk-storage-typeorm@^4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@jolocom/sdk-storage-typeorm/-/sdk-storage-typeorm-4.2.0.tgz#bcb559e2cbbf4246d302efb05778cb6e6d5bd7c1"
-  integrity sha512-LBmxfHBp8+ddOw/+Mbu3OU9mXoWuQhZQynl/eDkQ1VE0C0CJXTPrQ2g9LqzCHiwiAvOXajfnhb0l48+9awjydg==
+"@jolocom/sdk-storage-typeorm@^4.3.0-rc0":
+  version "4.3.0-rc0"
+  resolved "https://registry.yarnpkg.com/@jolocom/sdk-storage-typeorm/-/sdk-storage-typeorm-4.3.0-rc0.tgz#5a0f686621adb8753e25c944362c9ce3df2e3d9e"
+  integrity sha512-UfJkSVH59Izi13VEczLTkuSj6nXV6kKvxDSpp3GacL6GJ6NPU5X4Jl1H9J50cIyiohZjUwVmdabX8sohzOiJJQ==
   dependencies:
     class-transformer "^0.3.1"
     ramda "^0.27.1"
 
-"@jolocom/sdk@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@jolocom/sdk/-/sdk-1.0.0.tgz#90905704e055c113f5c3ce4fb364f20829f11b8e"
-  integrity sha512-Q2kWHAAwBZohY40IW/njtIk1H/xfgxz17iQ5AYvnezEizQ9YhIL2u13R1DmmxXW++LbnySvb1wA2xpOpW7UarA==
+"@jolocom/sdk@^1.3.0-rc0":
+  version "1.3.0-rc0"
+  resolved "https://registry.yarnpkg.com/@jolocom/sdk/-/sdk-1.3.0-rc0.tgz#78bc5f31c99250030263b7846bec936e3c3470db"
+  integrity sha512-lGZVZUAUdDPAqksF3kyTZ0q4y2iIPF131q3qnaJ9W15Mjzo+63lIMtoIZr3wwPWr95GxGmeh5AVsNbw1C1TR4Q==
   dependencies:
-    "@jolocom/protocol-ts" "^0.5.2"
+    "@jolocom/protocol-ts" "^0.5.4"
     form-data "^3.0.0"
     ramda "^0.26.1"
 
