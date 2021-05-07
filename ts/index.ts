@@ -8,7 +8,7 @@ export * from './transports'
 export * from './storage'
 export * from './passwordStore'
 export * from '@jolocom/sdk'
-
+export * from 'jolocom-lib'
 /**
  * Some hax required for Reach Native
  */
