@@ -48,5 +48,9 @@
     "@types/react-native": "^0.63.7",
     "react-native": "^0.59.0",
     "typescript": "^3.9.6"
+  },
+  "volta": {
+    "node": "12.20.2",
+    "npm": "7.12.0"
   }
 }
