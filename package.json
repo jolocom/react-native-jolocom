@@ -1,6 +1,6 @@
 {
   "name": "react-native-jolocom",
-  "version": "2.5.0-rc0",
+  "version": "2.5.0-rc1",
   "description": "React Native environment for Jolocom SDK",
   "main": "js/index.js",
   "files": [
@@ -30,7 +30,7 @@
     "react-native": "^0.59.0"
   },
   "dependencies": {
-    "@jolocom/sdk": "^1.3.0-rc1",
+    "@jolocom/sdk": "^1.3.0-rc2",
     "@jolocom/sdk-storage-typeorm": "^4.3.0-rc0",
     "crypto-browserify": "^3.12.0",
     "jolocom-lib": "^5.2.0",
