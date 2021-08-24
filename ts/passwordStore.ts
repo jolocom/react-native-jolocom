@@ -1,36 +1,29 @@
-import * as Keychain from 'react-native-keychain'
+import EncryptedStorage from 'react-native-encrypted-storage'
 import { IPasswordStore } from '@jolocom/sdk/js/storage'
-
-const randomBytes = require('react-native-randombytes').randomBytes
+// @ts-expect-error No declaration file
+import { randomBytes } from 'react-native-randombytes'
 
 /**
  * This PasswordStore will use the Android/iOS native secure storage to store a
- * randomly generated 32byte password
+ * randomly generated 32 byte password. Natively, iOS uses the Keychain API
+ * while Android uses the EncryptedSharedPreferences.
  */
+
 export class JolocomKeychainPasswordStore implements IPasswordStore {
-  private service = 'jolocom'
-  private username = 'JolocomSmartWallet'
-  private nativeLib = Keychain
+  private key = 'encryptionPassword'
 
   private async setPassword(password: string): Promise<void> {
-    await this.nativeLib.setGenericPassword(this.username, password, {
-      service: this.service,
-      storage: Keychain.STORAGE_TYPE.AES,
-    })
+    await EncryptedStorage.setItem(this.key, password)
   }
 
   async getPassword(): Promise<string> {
-    const result = await this.nativeLib.getGenericPassword({
-      service: this.service
-    })
+    let password = await EncryptedStorage.getItem(this.key)
 
-    if (result === false) {
-      // there is no password stored
-      const password = randomBytes(32).toString('base64')
+    if (!password) {
+      password = randomBytes(32).toString('base64') as string
       await this.setPassword(password)
-      return password
-    } else {
-      return result.password
     }
+
+    return password
   }
 }
