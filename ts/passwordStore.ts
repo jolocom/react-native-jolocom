@@ -1,7 +1,7 @@
-import EncryptedStorage from 'react-native-encrypted-storage'
 import { IPasswordStore } from '@jolocom/sdk/js/storage'
 // @ts-expect-error No declaration file
 import { randomBytes } from 'react-native-randombytes'
+import { SecureStorage } from './secureStorage'
 
 /**
  * This PasswordStore will use the Android/iOS native secure storage to store a
@@ -10,14 +10,14 @@ import { randomBytes } from 'react-native-randombytes'
  */
 
 export class JolocomKeychainPasswordStore implements IPasswordStore {
-  private key = 'encryptionPassword'
+  private key = 'jolocom'
 
   private async setPassword(password: string): Promise<void> {
-    await EncryptedStorage.setItem(this.key, password)
+    await SecureStorage.storeValue(this.key, password)
   }
 
   async getPassword(): Promise<string> {
-    let password = await EncryptedStorage.getItem(this.key)
+    let password = await SecureStorage.getValue(this.key)
 
     if (!password) {
       password = randomBytes(32).toString('base64') as string
