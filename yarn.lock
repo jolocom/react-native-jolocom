@@ -4736,6 +4736,11 @@ react-native-encrypted-storage@^4.0.2:
   resolved "https://registry.yarnpkg.com/react-native-encrypted-storage/-/react-native-encrypted-storage-4.0.2.tgz#c7d59b1d3ff2f80d572be3e85aaab3fdee16744a"
   integrity sha512-vneDkHGDuTvLQjUBztqb2YI8QoH1zxdJonPGTS+g57lfJZff9fAjoLSSb6NgMBebpXFcK3I3sEresGyL+3AArw==
 
+react-native-keychain@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-keychain/-/react-native-keychain-6.0.0.tgz#687379dd8468e8c37caa3c4d1c91393c6e04cb1d"
+  integrity sha512-5jt2oS9WNBT/GXBRdb+9KHTQokI1eMRDa50aQFR1koXqUpkULhvxItgQ2CKTd+ZchZQK/hn85qHQOs/gWgUGYA==
+
 react-native-randombytes@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/react-native-randombytes/-/react-native-randombytes-3.5.3.tgz#b3bdcd11473cce106551a586244b98855e443cd1"

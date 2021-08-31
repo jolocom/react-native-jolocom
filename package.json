@@ -1,6 +1,6 @@
 {
   "name": "react-native-jolocom",
-  "version": "2.5.0",
+  "version": "2.5.6",
   "description": "React Native environment for Jolocom SDK",
   "main": "js/index.js",
   "files": [
@@ -37,6 +37,7 @@
     "object.assign": "^4.1.0",
     "react-native-crypto": "^2.2.0",
     "react-native-encrypted-storage": "^4.0.2",
+    "react-native-keychain": "6.0.0",
     "react-native-randombytes": "^3.5.3",
     "stream-browserify": "^3.0.0",
     "tslib": "^1.7.1",
