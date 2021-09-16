@@ -1,0 +1,53 @@
+{
+  "name": "react-native-jolocom",
+  "version": "2.7.0-rc2",
+  "description": "React Native environment for Jolocom SDK",
+  "main": "js/index.js",
+  "files": [
+    "js",
+    "android",
+    "ios"
+  ],
+  "scripts": {
+    "start": "yarn build -w",
+    "build": "rm -rf js; tsc -p .",
+    "prepare": "yarn build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jolocom/react-native-jolocom.git"
+  },
+  "keywords": [
+    "react-native",
+    "jolocom",
+    "jolocom sdk"
+  ],
+  "author": "Jolocom Dev <dev@jolocom.io>",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "@jolocom/native-core-react-native": "^1.2.0",
+    "react-native": "^0.59.0"
+  },
+  "dependencies": {
+    "@jolocom/sdk": "jolocom/jolocom-sdk#jolocom-sdk-v1.4.0-rc3-gitpkg",
+    "@jolocom/sdk-storage-typeorm": "^4.3.0-rc0",
+    "crypto-browserify": "^3.12.0",
+    "jolocom-lib": "jolocom/jolocom-lib#jolocom-lib-v5.3.0-rc0-gitpkg",
+    "object.assign": "^4.1.0",
+    "react-native-crypto": "^2.2.0",
+    "react-native-encrypted-storage": "^4.0.2",
+    "react-native-keychain": "6.0.0",
+    "react-native-randombytes": "^3.5.3",
+    "stream-browserify": "^3.0.0",
+    "tslib": "^1.7.1",
+    "unorm": "^1.6.0",
+    "vm-browserify": "^1.1.2"
+  },
+  "devDependencies": {
+    "@jolocom/native-core-react-native": "^1.1.0",
+    "@types/react-native": "^0.63.7",
+    "react-native": "^0.59.0",
+    "typescript": "^3.9.6"
+  }
+}
