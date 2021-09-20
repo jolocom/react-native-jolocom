@@ -7,17 +7,9 @@ exports.default = RNJolocom;
 tslib_1.__exportStar(require("./storage"), exports);
 tslib_1.__exportStar(require("./passwordStore"), exports);
 tslib_1.__exportStar(require("./secureStorage"), exports);
+tslib_1.__exportStar(require("./plugins"), exports);
 tslib_1.__exportStar(require("@jolocom/sdk"), exports);
 tslib_1.__exportStar(require("jolocom-lib"), exports);
-/**
- * Re-exporting available plugins
- */
-var plugins_1 = require("./plugins");
-Object.defineProperty(exports, "DeepLinkingProvider", { enumerable: true, get: function () { return plugins_1.DeepLinkingProvider; } });
-Object.defineProperty(exports, "JolocomDeepLinkingTransport", { enumerable: true, get: function () { return plugins_1.JolocomDeepLinkingTransport; } });
-Object.defineProperty(exports, "LinkingErrorCode", { enumerable: true, get: function () { return plugins_1.LinkingErrorCode; } });
-Object.defineProperty(exports, "JolocomLinking", { enumerable: true, get: function () { return plugins_1.JolocomLinking; } });
-Object.defineProperty(exports, "JolocomWebSockets", { enumerable: true, get: function () { return plugins_1.JolocomWebSockets; } });
 /**
  * Some hax required for Reach Native
  */
