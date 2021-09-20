@@ -3,26 +3,18 @@
   "version": "2.6.0",
   "description": "React Native environment for Jolocom SDK",
   "main": "js/index.js",
-  "files": [
-    "js",
-    "android",
-    "ios"
-  ],
+  "files": ["js", "android", "ios"],
   "scripts": {
     "start": "yarn build -w",
     "build": "rm -rf js; tsc -p .",
     "prepare": "yarn build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --ext .tsx --ext .ts ts/"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/jolocom/react-native-jolocom.git"
   },
-  "keywords": [
-    "react-native",
-    "jolocom",
-    "jolocom sdk"
-  ],
+  "keywords": ["react-native", "jolocom", "jolocom sdk"],
   "author": "Jolocom Dev <dev@jolocom.io>",
   "license": "Apache-2.0",
   "peerDependencies": {
@@ -47,7 +39,25 @@
   "devDependencies": {
     "@jolocom/native-core-react-native": "^1.1.0",
     "@types/react-native": "^0.63.7",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
     "react-native": "^0.59.0",
     "typescript": "^3.9.6"
+  },
+  "lint-staged": {
+    "*.@(js|ts|tsx)": ["prettier --write", "eslint -c .eslintrc.yml --fix"],
+    "*.json": ["prettier --parser json --write"],
+    "*.@(yml|yaml)": ["prettier --parser yaml --write"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
