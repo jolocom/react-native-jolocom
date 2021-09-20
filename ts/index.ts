@@ -6,19 +6,9 @@ export default RNJolocom
 export * from './storage'
 export * from './passwordStore'
 export * from './secureStorage'
+export * from "./plugins"
 export * from '@jolocom/sdk'
 export * from 'jolocom-lib'
-
-/**
- * Re-exporting available plugins
- */
-export {
-  DeepLinkingProvider,
-  JolocomDeepLinkingTransport,
-  LinkingErrorCode,
-  JolocomLinking,
-  JolocomWebSockets
-} from './plugins'
 
 /**
  * Some hax required for Reach Native
