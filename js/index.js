@@ -12,15 +12,12 @@ tslib_1.__exportStar(require("jolocom-lib"), exports);
 /**
  * Re-exporting available plugins
  */
-var DeepLinkingProvider_1 = require("./plugins/deep-linking/DeepLinkingProvider");
-Object.defineProperty(exports, "DeepLinkingProvider", { enumerable: true, get: function () { return DeepLinkingProvider_1.DeepLinkingProvider; } });
-var JolocomDeepLinkingTransport_1 = require("./plugins/deep-linking/JolocomDeepLinkingTransport");
-Object.defineProperty(exports, "JolocomDeepLinkingTransport", { enumerable: true, get: function () { return JolocomDeepLinkingTransport_1.JolocomDeepLinkingTransport; } });
-var JolocomLinking_1 = require("./plugins/linking/JolocomLinking");
-Object.defineProperty(exports, "LinkingErrorCode", { enumerable: true, get: function () { return JolocomLinking_1.LinkingErrorCode; } });
-Object.defineProperty(exports, "JolocomLinking", { enumerable: true, get: function () { return JolocomLinking_1.JolocomLinking; } });
-var JolocomWebSockets_1 = require("./plugins/web-sockets/JolocomWebSockets");
-Object.defineProperty(exports, "JolocomWebSockets", { enumerable: true, get: function () { return JolocomWebSockets_1.JolocomWebSockets; } });
+var plugins_1 = require("./plugins");
+Object.defineProperty(exports, "DeepLinkingProvider", { enumerable: true, get: function () { return plugins_1.DeepLinkingProvider; } });
+Object.defineProperty(exports, "JolocomDeepLinkingTransport", { enumerable: true, get: function () { return plugins_1.JolocomDeepLinkingTransport; } });
+Object.defineProperty(exports, "LinkingErrorCode", { enumerable: true, get: function () { return plugins_1.LinkingErrorCode; } });
+Object.defineProperty(exports, "JolocomLinking", { enumerable: true, get: function () { return plugins_1.JolocomLinking; } });
+Object.defineProperty(exports, "JolocomWebSockets", { enumerable: true, get: function () { return plugins_1.JolocomWebSockets; } });
 /**
  * Some hax required for Reach Native
  */

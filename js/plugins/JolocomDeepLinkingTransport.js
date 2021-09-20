@@ -1,8 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JolocomDeepLinkingTransport = void 0;
+exports.JolocomDeepLinkingTransport = exports.DeepLinkingProvider = void 0;
 const tslib_1 = require("tslib");
 const sdk_1 = require("@jolocom/sdk");
+/**
+ * A provider to extend when creating your
+ * own linking strategy
+ */
+class DeepLinkingProvider {
+}
+exports.DeepLinkingProvider = DeepLinkingProvider;
 /**
  * Deep Linking transport plugin,
  * where you can inject your prefered Linking implementation

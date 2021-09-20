@@ -7,11 +7,17 @@ import {
   TransportMessageHandler,
 } from '@jolocom/sdk'
 
-import { DeepLinkingProvider } from './DeepLinkingProvider'
+/**
+ * A provider to extend when creating your
+ * own linking strategy
+ */
+export abstract class DeepLinkingProvider {
+  public abstract subscribe(handler?: (token: string) => Promise<void>): void
+}
 
 /**
  * Deep Linking transport plugin,
- * where you can inject your prefered Linking implementation
+ * where you can inject your prefered Linking implementation 
  * 
  * usage: sdk.usePlugins(new JolocomDeepLinkingTransport(new YourLinkingProvider()))
 
