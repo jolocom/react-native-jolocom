@@ -15,7 +15,9 @@ class SecureStorage {
             const result = yield react_native_encrypted_storage_1.default.getItem(key);
             // NOTE: Migration from the Keychain package
             if (!result) {
-                const deprecatedResult = yield Keychain.getGenericPassword({ service: key });
+                const deprecatedResult = yield Keychain.getGenericPassword({
+                    service: key,
+                });
                 if (!deprecatedResult)
                     return null;
                 yield this.storeValue(key, deprecatedResult.password);

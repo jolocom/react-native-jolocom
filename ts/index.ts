@@ -1,27 +1,40 @@
-// @ts-ignore
 import { NativeModules } from 'react-native'
 
-const { RNJolocom } = NativeModules;
+const { RNJolocom } = NativeModules
 
-export default RNJolocom;
-export * from './transports'
+export default RNJolocom
 export * from './storage'
 export * from './passwordStore'
 export * from './secureStorage'
 export * from '@jolocom/sdk'
 export * from 'jolocom-lib'
+
+/**
+ * Re-exporting available plugins
+ */
+export { DeepLinkingProvider } from './plugins/deep-linking/DeepLinkingProvider'
+export { JolocomDeepLinkingTransport } from './plugins/deep-linking/JolocomDeepLinkingTransport'
+export {
+  LinkingErrorCode,
+  JolocomLinking,
+} from './plugins/linking/JolocomLinking'
+export { JolocomWebSockets } from './plugins/web-sockets/JolocomWebSockets'
+
 /**
  * Some hax required for Reach Native
  */
 
 // react-native overrides Object.assign with a non-spec-compliant version.
 // bring it back because some dependencies break otherwise
+// eslint-disable-next-line
 const assign = require('object.assign/implementation')
+// eslint-disable-next-line
 Object.assign = assign
 
 // react-native uses a old version of JS Core that does not support
 // String.prototype.normalize. This is used in bip39 and therefore needs a polyfill
-String.prototype.normalize = function(form: string): string {
+String.prototype.normalize = function (form: string): string {
+  // eslint-disable-next-line
   return require('unorm')[String(form).toLowerCase()](this)
 }
 
@@ -33,11 +46,11 @@ process.version = 'v11.13.0'
  * Object.setPrototypeOf polyfill because typeorm (and possibly others) use it
  */
 
-// @ts-ignore
 if (!Object.setPrototypeOf) {
-  // @ts-ignore
-  Object.setPrototypeOf = function(obj, proto) {
+  Object.setPrototypeOf = function (obj, proto) {
+    // eslint-disable-next-line
     obj.__proto__ = proto
+    // eslint-disable-next-line
     return obj
   }
 }
@@ -48,8 +61,6 @@ if (!Object.setPrototypeOf) {
 // anymore
 
 //import RNFetchBlob from 'rn-fetch-blob'
-//// @ts-ignore
 //global.fetch = new RNFetchBlob.polyfill.Fetch({ auto: true }).build()
 
-// @ts-ignore
 //global.Blob = RNFetchBlob.polyfill.Blob
