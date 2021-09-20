@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JolocomKeychainPasswordStore = void 0;
 const tslib_1 = require("tslib");
-// @ts-expect-error No declaration file
 const react_native_randombytes_1 = require("react-native-randombytes");
 const secureStorage_1 = require("./secureStorage");
 /**

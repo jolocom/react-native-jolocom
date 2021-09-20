@@ -1,5 +1,4 @@
 import { IPasswordStore } from '@jolocom/sdk/js/storage'
-// @ts-expect-error No declaration file
 import { randomBytes } from 'react-native-randombytes'
 import { SecureStorage } from './secureStorage'
 
@@ -20,7 +19,7 @@ export class JolocomKeychainPasswordStore implements IPasswordStore {
     let password = await SecureStorage.getValue(this.key)
 
     if (!password) {
-      password = randomBytes(32).toString('base64') as string
+      password = randomBytes(32).toString('base64')
       await this.setPassword(password)
     }
 
