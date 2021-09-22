@@ -12,7 +12,7 @@ import {
  * own linking strategy
  */
 export abstract class DeepLinkingProvider {
-  public abstract subscribe(handler?: (token: string) => Promise<void>): void
+  public abstract subscribe(handler: TransportMessageHandler): void
 }
 
 /**
@@ -28,19 +28,18 @@ export class JolocomDeepLinkingTransport implements JolocomPlugin {
   constructor(private _linking: DeepLinkingProvider) {}
 
   async register(sdk: JolocomSDK): Promise<void> {
-    return new Promise((res) => {
-      this._sdk = sdk
-      sdk.transports.register(InteractionTransportType.Deeplink, this)
-      res()
-    })
+    this._sdk = sdk
+    sdk.transports.register(InteractionTransportType.Deeplink, this)
+  }
+
+  async subscribe(onMessage: TransportMessageHandler) {
+    this._linking.subscribe(onMessage)
   }
 
   start(
     transport: TransportDesc,
     onMessage?: TransportMessageHandler,
   ): TransportAPI {
-    this._linking.subscribe(onMessage)
-
     if (this._sdk) {
       return this._sdk?.transports.http.start(transport, onMessage)
     } else {
