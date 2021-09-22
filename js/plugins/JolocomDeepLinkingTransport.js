@@ -24,16 +24,17 @@ class JolocomDeepLinkingTransport {
     }
     register(sdk) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            return new Promise((res) => {
-                this._sdk = sdk;
-                sdk.transports.register(sdk_1.InteractionTransportType.Deeplink, this);
-                res();
-            });
+            this._sdk = sdk;
+            sdk.transports.register(sdk_1.InteractionTransportType.Deeplink, this);
+        });
+    }
+    subscribe(onMessage) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            this._linking.subscribe(onMessage);
         });
     }
     start(transport, onMessage) {
         var _a;
-        this._linking.subscribe(onMessage);
         if (this._sdk) {
             return (_a = this._sdk) === null || _a === void 0 ? void 0 : _a.transports.http.start(transport, onMessage);
         }

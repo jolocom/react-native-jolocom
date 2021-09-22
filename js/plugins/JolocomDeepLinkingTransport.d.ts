@@ -4,7 +4,7 @@ import { JolocomPlugin, JolocomSDK, TransportAPI, TransportDesc, TransportMessag
  * own linking strategy
  */
 export declare abstract class DeepLinkingProvider {
-    abstract subscribe(handler?: (token: string) => Promise<void>): void;
+    abstract subscribe(handler: TransportMessageHandler): void;
 }
 /**
  * Deep Linking transport plugin,
@@ -18,5 +18,6 @@ export declare class JolocomDeepLinkingTransport implements JolocomPlugin {
     private _sdk;
     constructor(_linking: DeepLinkingProvider);
     register(sdk: JolocomSDK): Promise<void>;
+    subscribe(onMessage: TransportMessageHandler): Promise<void>;
     start(transport: TransportDesc, onMessage?: TransportMessageHandler): TransportAPI;
 }
