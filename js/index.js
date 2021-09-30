@@ -7,7 +7,6 @@ exports.default = RNJolocom;
 tslib_1.__exportStar(require("./storage"), exports);
 tslib_1.__exportStar(require("./passwordStore"), exports);
 tslib_1.__exportStar(require("./secureStorage"), exports);
-tslib_1.__exportStar(require("./plugins"), exports);
 tslib_1.__exportStar(require("@jolocom/sdk"), exports);
 tslib_1.__exportStar(require("jolocom-lib"), exports);
 /**
