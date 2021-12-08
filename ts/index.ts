@@ -1,14 +1,14 @@
-import { NativeModules } from 'react-native'
+import { NativeModules } from "react-native";
 
-const { RNJolocom } = NativeModules
+const { RNJolocom } = NativeModules;
 
-export default RNJolocom
-export * from './storage'
-export * from './passwordStore'
-export * from './secureStorage'
-export * from "./plugins"
-export * from '@jolocom/sdk'
-export * from 'jolocom-lib'
+export default RNJolocom;
+export * from "./storage";
+export * from "./passwordStore";
+export * from "./secureStorage";
+export * from "./plugins";
+export * from "@jolocom/sdk";
+export * from "jolocom-lib";
 
 /**
  * Some hax required for Reach Native
@@ -17,20 +17,20 @@ export * from 'jolocom-lib'
 // react-native overrides Object.assign with a non-spec-compliant version.
 // bring it back because some dependencies break otherwise
 // eslint-disable-next-line
-const assign = require('object.assign/implementation')
+const assign = require("object.assign/implementation");
 // eslint-disable-next-line
-Object.assign = assign
+Object.assign = assign;
 
 // react-native uses a old version of JS Core that does not support
 // String.prototype.normalize. This is used in bip39 and therefore needs a polyfill
 String.prototype.normalize = function (form: string): string {
   // eslint-disable-next-line
-  return require('unorm')[String(form).toLowerCase()](this)
-}
+  return require("unorm")[String(form).toLowerCase()](this);
+};
 
 // required as some dependencies (ethereum stuff) think we are node and check
 // the version
-process.version = 'v11.13.0'
+process.version = "v11.13.0";
 
 /**
  * Object.setPrototypeOf polyfill because typeorm (and possibly others) use it
@@ -39,10 +39,10 @@ process.version = 'v11.13.0'
 if (!Object.setPrototypeOf) {
   Object.setPrototypeOf = function (obj, proto) {
     // eslint-disable-next-line
-    obj.__proto__ = proto
+    obj.__proto__ = proto;
     // eslint-disable-next-line
-    return obj
-  }
+    return obj;
+  };
 }
 
 // NOTE: the below code was needed so we can POST DID documents to IPFS nodes.
