@@ -24,6 +24,7 @@ export class SecureStorage {
   }
 
   static async removeValue(key: string): Promise<void> {
+    await Keychain.resetGenericPassword({ service: key });
     await EncryptedStorage.removeItem(key);
   }
 }
