@@ -1,6 +1,6 @@
 {
   "name": "react-native-jolocom",
-  "version": "2.7.0",
+  "version": "2.7.2",
   "description": "React Native environment for Jolocom SDK",
   "main": "js/index.js",
   "files": [
