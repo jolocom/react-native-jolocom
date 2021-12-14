@@ -16,6 +16,7 @@ export class SecureStorage {
       });
       if (!deprecatedResult) return null;
 
+      await this.removeValue(key)
       await this.storeValue(key, deprecatedResult.password);
       return deprecatedResult.password;
     }
