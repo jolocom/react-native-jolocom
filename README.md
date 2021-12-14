@@ -24,12 +24,14 @@ $ npm install --save react-native-jolocom @jolocom/native-core-react-native
 ### Mostly automatic installation
 
 For React Native version >= 0.60, Android is automatic, but for iOS you need to do:
+
 ```sh
 $ cd ios
 $ pod install
 ```
 
 For React Native version < 0.60 you need to link
+
 ```
 $ react-native link react-native-jolocom @jolocom/native-core-react-native
 ```
@@ -49,17 +51,18 @@ module.exports = {
   resolver: {
     extraNodeModules: {
       // React Native bindings for jolocom/wallet-rs
-      crypto: require.resolve('react-native-crypto'),
+      crypto: require.resolve("react-native-crypto"),
       // Polyfills for node packages
-      'crypto-browserify': require.resolve('react-native-crypto'),
-      stream: require.resolve('stream-browserify'),
-      vm: require.resolve('vm-browserify'),
+      "crypto-browserify": require.resolve("react-native-crypto"),
+      stream: require.resolve("stream-browserify"),
+      vm: require.resolve("vm-browserify"),
     },
   },
-}
+};
 ```
 
 And of course you need to add those as dependency in your project:
+
 ```sh
 $ yarn add react-native-crypto stream-browserify vm-browserify
 ```
@@ -73,25 +76,25 @@ implemented. An example typeorm configuration `ormconfig.ts` is provided below
 ```ts
 // ormconfig.ts
 
-import { entityList } from '@jolocom/sdk-storage-typeorm'
-import { ConnectionOptions } from 'typeorm'
+import { entityList } from "@jolocom/sdk-storage-typeorm";
+import { ConnectionOptions } from "typeorm";
 
 // TODO Add migrations when you create any!
-const migrations: any[] = []
+const migrations: any[] = [];
 
 export default {
-  type: 'react-native',
-  database: 'MyApplicationData',
-  location: 'default',
-  logging: ['error', 'warn', 'schema'],
+  type: "react-native",
+  database: "MyApplicationData",
+  location: "default",
+  logging: ["error", "warn", "schema"],
   entities: entityList,
   migrations,
   migrationsRun: true,
   synchronize: false,
   cli: {
-    migrationsDir: 'src/migrations',
+    migrationsDir: "src/migrations",
   },
-} as ConnectionOptions
+} as ConnectionOptions;
 ```
 
 ## Usage
@@ -105,16 +108,16 @@ import {
   JolocomSDK,
   JolocomTypeormStorage,
   JolocomKeychainPasswordStore,
-} from 'react-native-jolocom'
+} from "react-native-jolocom";
 
-import { createConnection } from 'typeorm'
-import ormconfig from './ormconfig.ts'
+import { createConnection } from "typeorm";
+import ormconfig from "./ormconfig.ts";
 
 async function initJolocom() {
-  const conn = await createConnection(ormconfig)
-  const storage = new JolocomTypeormStorage(conn)
-  const passwordStore = new JolocomKeychainPasswordStore()
-  return new JolocomSDK({ storage, passwordStore })
+  const conn = await createConnection(ormconfig);
+  const storage = new JolocomTypeormStorage(conn);
+  const passwordStore = new JolocomKeychainPasswordStore();
+  return new JolocomSDK({ storage, passwordStore });
 }
 ```
 

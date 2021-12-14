@@ -1,6 +1,6 @@
-import { IPasswordStore } from '@jolocom/sdk/js/storage'
-import { randomBytes } from 'react-native-randombytes'
-import { SecureStorage } from './secureStorage'
+import { IPasswordStore } from "@jolocom/sdk/js/storage";
+import { randomBytes } from "react-native-randombytes";
+import { SecureStorage } from "./secureStorage";
 
 /**
  * This PasswordStore will use the Android/iOS native secure storage to store a
@@ -9,20 +9,20 @@ import { SecureStorage } from './secureStorage'
  */
 
 export class JolocomKeychainPasswordStore implements IPasswordStore {
-  private key = 'jolocom'
+  private key = "jolocom";
 
   private async setPassword(password: string): Promise<void> {
-    await SecureStorage.storeValue(this.key, password)
+    await SecureStorage.storeValue(this.key, password);
   }
 
   async getPassword(): Promise<string> {
-    let password = await SecureStorage.getValue(this.key)
+    let password = await SecureStorage.getValue(this.key);
 
     if (!password) {
-      password = randomBytes(32).toString('base64')
-      await this.setPassword(password)
+      password = randomBytes(32).toString("base64");
+      await this.setPassword(password);
     }
 
-    return password
+    return password;
   }
 }

@@ -1,1 +1,1 @@
-export * from '@jolocom/sdk-storage-typeorm'
+export * from "@jolocom/sdk-storage-typeorm";
