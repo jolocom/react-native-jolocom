@@ -1106,6 +1106,13 @@
   dependencies:
     cred-types-jolocom-core "^0.0.11"
 
+"@jolocom/protocol-ts@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@jolocom/protocol-ts/-/protocol-ts-0.6.1.tgz#e12570fdb100cf609a8c2abf26c03935647eb587"
+  integrity sha512-XmTX0mIneLcMomv8MUrUQBSnH8A5bQ/vZRayzNLcHHNR/0ET4wZ2jNFZz7+oH/Aa1/NnhpVOzA54wXkhc7Pf1A==
+  dependencies:
+    cred-types-jolocom-core "^0.0.11"
+
 "@jolocom/registry-contract@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@jolocom/registry-contract/-/registry-contract-1.0.0.tgz#df00e053701b9704be5a69b98cc78d00723a26b2"
@@ -1121,12 +1128,12 @@
     class-transformer "^0.3.1"
     ramda "^0.27.1"
 
-"@jolocom/sdk@^1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@jolocom/sdk/-/sdk-1.3.2.tgz#481d25c4884d013a704c0a0b40ea62119baff50c"
-  integrity sha512-2z0RUHIXfpQvBOFsFafLhSsgjhiJrgjGqEqYuGJgE56HIdMCEXaIREC1Eeq1W/Z/MH+kit5LvEpW4ymzq81kIg==
+"@jolocom/sdk@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@jolocom/sdk/-/sdk-1.5.0.tgz#bc9217fc544343da71427f881158f8a688697365"
+  integrity sha512-f3X51GTLQYNIw85HGaCtuiFR5Z51ZNG75UDaQcW08ClHEOYXGHj2U1lCfBTaoOEGw28So11eieUIs5pnZ8BhhQ==
   dependencies:
-    "@jolocom/protocol-ts" "^0.5.4"
+    "@jolocom/protocol-ts" "^0.6.1"
     form-data "^3.0.0"
     ramda "^0.26.1"
 
